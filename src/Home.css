@@ -1,0 +1,219 @@
+/* Global Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e1e2e, #3a4452);
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+  }
+  
+  /* Menu Card */
+  .menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .menu-card {
+    width: 90%;
+    max-width: 350px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    padding: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    position: relative;
+    animation: fadeIn 0.8s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .menu-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+  }
+  
+  /* Header */
+  .menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .menu-logo {
+    font-size: 32px;
+    color: #ff4757;
+  }
+  
+  .menu-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Tagline */
+  .menu-tagline {
+    font-size: 14px;
+    color: #f8d7da;
+    margin-top: 5px;
+    font-style: italic;
+  }
+  
+  /* Pure Veg Tag */
+  .pure-veg {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    color: white;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    transform: scale(0.9);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .pure-veg:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Food Image */
+  .menu-image {
+    margin: 20px 0;
+  }
+  
+  .menu-image img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .menu-image img:hover {
+    transform: scale(1.15) rotate(5deg);
+  }
+  
+  /* Footer */
+  .menu-food {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff7675;
+  }
+  
+  .menu-restaurant {
+    font-size: 15px;
+    font-weight: bold;
+    color: #f8f9fa;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 400px) {
+    .menu-card {
+      width: 100%;
+      padding: 18px;
+    }
+  
+    .menu-title {
+      font-size: 20px;
+    }
+  
+    .menu-image img {
+      width: 110px;
+      height: 110px;
+    }
+  
+    .menu-food {
+      font-size: 19px;
+    }
+  }
+  
+  
+  .menu-buttons {
+    display: flex;
+    flex-direction: column !important; /* Stack buttons in a column on mobile */
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100% !important; /* Ensure it stays within the card */
+  }
+  
+  .txtcnt{
+    margin: auto !important;
+    padding-right: 8px !important;
+  }
+  .menu-btn, .contact-btn {
+    width: 90%; /* Adjust width to fit inside the box */
+    max-width: 250px; /* Limit max size */
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center !important; /* Ensure text stays centered */
+  }
+  
+  .menu-btn {
+    background: linear-gradient(45deg, #ff7675, #ff4757);
+  }
+  
+  .contact-btn {
+    background: linear-gradient(45deg, #1e90ff, #007bff);
+  }
+  
+  .menu-btn:hover, .contact-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  
+  @media (min-width: 768px) {
+    .menu-buttons {
+      flex-direction: row; /* Row layout on larger screens */
+      justify-content: center;
+    }
+  
+    .menu-btn, .contact-btn {
+      width: auto;
+      padding: 15px 30px;
+      font-size: 20px;
+    }
+  }
+
+  .myname{
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
